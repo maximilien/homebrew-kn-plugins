@@ -16,10 +16,10 @@ class Admin < Formula
   version v
 
   if OS.mac?
-    url "#{base_url}/#{plugin_name}-darwin-amd64"
+    url "#{base_url}/#{file_name}-darwin-amd64"
     sha256 "62009d94134abb23f208b725ba47eb5da5ca8bf55a554300576cbc595f111069"
   else
-    url "#{base_url}/#{plugin_name}-linux-amd64"
+    url "#{base_url}/#{file_name}-linux-amd64"
     sha256 "ac1f39208094b74f728dd71e4073b0dcee7f96fc18da3e2ab88ca4e482508695"
   end
 
