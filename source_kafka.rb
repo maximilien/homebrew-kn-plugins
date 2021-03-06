@@ -4,12 +4,14 @@ else
   require "fileutils"
 end
 
-class SourceKafka < Formula
+class Admin < Formula
   v = "v0.21.0"
-  plugin_name = "kn-source-kafka"
+  plugin_name = "source-kafka"
+  path_name = "kn-plugin-#{plugin_name}"
+  file_name = "kn-#{plugin_name}"
 
-  homepage "https://github.com/knative-sandbox/#{plugin_name}"
-  base_url = "https://github.com/knative-sandbox/#{plugin_name}/releases/download/#{v}"
+  homepage "https://github.com/knative-sandbox/#{path_name}"
+  base_url = "https://github.com/knative-sandbox/#{path_name}/releases/download/#{v}"
 
   version v
 
@@ -23,14 +25,14 @@ class SourceKafka < Formula
 
   def install
     if OS.mac?
-      FileUtils.mv("#{plugin_name}-darwin-amd64", plugin_name)
+      FileUtils.mv("#{file_name}-darwin-amd64", file_name)
     else
-      FileUtils.mv("#{plugin_name}-linux-amd64", plugin_name)
+      FileUtils.mv("#{file_name}-linux-amd64", file_name)
     end
-    bin.install plugin_name
+    bin.install file_name
   end
 
   test do
-    system "#{bin}/#{plugin_name}", "version"
+    system "#{bin}/#{file_name}", "version"
   end
 end
