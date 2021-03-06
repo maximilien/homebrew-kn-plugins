@@ -25,11 +25,11 @@ class Admin < Formula
 
   def install
     if OS.mac?
-      FileUtils.mv("#{file_name}-darwin-amd64", file_name)
+      FileUtils.mv("#{file_name}-darwin-amd64", "#{file_name}")
     else
-      FileUtils.mv("#{file_name}-linux-amd64", file_name)
+      FileUtils.mv("#{file_name}-linux-amd64", "#{file_name}")
     end
-    bin.install file_name
+    bin.install "#{file_name}"
   end
 
   test do
