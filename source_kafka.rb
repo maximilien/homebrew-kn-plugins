@@ -4,7 +4,7 @@ else
   require "fileutils"
 end
 
-class Admin < Formula
+class SourceKafka < Formula
   v = "v0.21.0"
   plugin_name = "source-kafka"
   path_name = "kn-plugin-#{plugin_name}"
