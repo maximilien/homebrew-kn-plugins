@@ -6,7 +6,7 @@ end
 
 class Admin < Formula
   v = "v0.21.0"
-  plugin_name = "kn-plugin-admin"
+  plugin_name = "kn-admin"
 
   homepage "https://github.com/knative-sandbox/#{plugin_name}"
   base_url = "https://github.com/knative-sandbox/#{plugin_name}/releases/download/#{v}"

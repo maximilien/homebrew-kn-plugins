@@ -6,7 +6,7 @@ end
 
 class SourceKafka < Formula
   v = "v0.21.0"
-  plugin_name = "kn-plugin-source-kafka"
+  plugin_name = "kn-source-kafka"
 
   homepage "https://github.com/knative-sandbox/#{plugin_name}"
   base_url = "https://github.com/knative-sandbox/#{plugin_name}/releases/download/#{v}"
