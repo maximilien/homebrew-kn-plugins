@@ -9,9 +9,9 @@ class SourceKafka < Formula
   plugin_name = "source-kafka"
   path_name = "kn-plugin-#{plugin_name}"
   file_name = "kn-#{plugin_name}"
+  base_url = "https://github.com/knative-sandbox/#{path_name}/releases/download/#{v}"
 
   homepage "https://github.com/knative-sandbox/#{path_name}"
-  base_url = "https://github.com/knative-sandbox/#{path_name}/releases/download/#{v}"
 
   version v
 
@@ -25,14 +25,14 @@ class SourceKafka < Formula
 
   def install
     if OS.mac?
-      FileUtils.mv("#{file_name}-darwin-amd64", "#{file_name}")
+      FileUtils.mv("kn-source-kafka-darwin-amd64", "kn-source-kafka")
     else
-      FileUtils.mv("#{file_name}-linux-amd64", "#{file_name}")
+      FileUtils.mv("kn-source-kafka-linux-amd64", "kn-source-kafka")
     end
-    bin.install "#{file_name}"
+    bin.install "kn-source-kafka"
   end
 
   test do
-    system "#{bin}/#{file_name}", "version"
+    system "#{bin}/kn-source-kafka", "version"
   end
 end
