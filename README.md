@@ -1,3 +1,8 @@
+**NOTE** moved to [knative-sandbox](https://github.com/knative-sandbox) repo: https://github.com/knative-sandbox/homebrew-kn-plugins
+
+Submit any issues or PRs there ^^^
+
+
 ## Homebrew Tap for Knative client plugins
 
 This repository contains the [Hombrew Tap](https://docs.brew.sh/Taps) for Knative clients plugins.
